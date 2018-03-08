@@ -1,0 +1,10 @@
+$backgroundColor: #3bef62;
+$borderColor: #006d17;
+
+#notice {
+    background-color: $backgroundColor;
+    border: 1px solid $borderColor;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px 20px 0 20px;
+}

@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Categories</h1>
+
+<table>
+
+  <tr> 
+    <th>Name</th>
+    <th>Last Updated</th>
+    <th colspan="2">&nbsp;</th>
+  </tr>
+
+  <% @categories.each do |category| %>
+    <tr>
+      <td><%= link_to category.name, category %></td>
+      <td><%= time_ago_in_words(category.updated_at) %> ago</td>
+      <td><%= link_to 'Edit', edit_category_path(category) %></td>
+      <td><%= button_to 'Destroy', category, confirm: 'Are you sure?', method: :delete %></td>     
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'New Category', new_category_path %>
